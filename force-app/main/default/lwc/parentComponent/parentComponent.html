@@ -1,0 +1,10 @@
+<template>
+    <div class="slds-grid slds-wrap" style="background-color: rgb(177, 224, 245);">
+        <div class="slds-col slds-size_4-of-12 slds-var-p-right_small">
+            <c-product-list-component onproductselected={handleAddToCart}></c-product-list-component>
+        </div>
+        <div class="slds-col slds-size_4-of-12">
+            <c-cart-component cart-items={cartItems}></c-cart-component>
+        </div>
+    </div>
+</template>

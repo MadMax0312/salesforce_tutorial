@@ -1,0 +1,19 @@
+<template>
+    <div class="">
+        <h1>Shop Items</h1>
+    </div>
+    <div class="slds-grid slds-wrap slds-gutters">
+        <template for:each={products} for:item="product">
+            <div key={product.id} class="slds-col slds-size_6-of-12 slds-var-p-around_small">
+                <div class="slds-card" style="height: 100%;">
+                    <div class="slds-card__body card_class card_inner">
+                        <img src={product.imageUrl} alt={product.name} class="product-image"/>
+                        <h2>{product.name}</h2>
+                        <p>Price: {product.price}</p>
+                        <lightning-button label="Add to Cart" onclick={handleAddToCart} data-id={product.id}></lightning-button>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>
