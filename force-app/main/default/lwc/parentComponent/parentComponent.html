@@ -3,8 +3,11 @@
         <div class="slds-col slds-size_4-of-12 slds-var-p-right_small">
             <c-product-list-component onproductselected={handleAddToCart}></c-product-list-component>
         </div>
+        <div class="slds-col slds-size_4-of-12 slds-var-p-right_small">
+            <c-cart-component cart-items={cartItems} onorderplaced={handleSubmit}></c-cart-component>
+        </div>
         <div class="slds-col slds-size_4-of-12">
-            <c-cart-component cart-items={cartItems}></c-cart-component>
+            <c-order-component message={orderMessage}></c-order-component>
         </div>
     </div>
 </template>

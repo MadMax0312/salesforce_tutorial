@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-var-m-bottom_small">
+        <h1>Order</h1>
+    </div>
+    <div>
+        <template if:true={orderPlaced}>
+            <div class="slds-text-align_center">
+                Order successfully placed!
+            </div>
+        </template>
+        <template if:false={orderPlaced}>
+            <div class="slds-text-align_center">
+                No Orders yet...
+            </div>
+        </template>
+    </div>
+</template>

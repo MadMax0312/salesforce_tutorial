@@ -12,7 +12,6 @@ export default class CartComponent extends LightningElement {
     }
 
     handleCartUpdate(event) {
-        console.log('kllllk')
         this.cartItems = event.detail;
     }
 
@@ -25,5 +24,9 @@ export default class CartComponent extends LightningElement {
             ...item,
             subtotal: item.quantity * item.price
         }));
+    }
+
+    handleSubmit(event) {
+        this.dispatchEvent(new CustomEvent('orderplaced', {detail: 'Successfully placed Order'}))
     }
 }

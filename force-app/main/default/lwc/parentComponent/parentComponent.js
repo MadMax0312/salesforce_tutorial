@@ -2,6 +2,7 @@ import { LightningElement, track } from 'lwc';
 
 export default class ParentComponent extends LightningElement {
     @track cartItems = [];
+    @track orderMessage = '';
 
     handleAddToCart(event) {
         const productId = parseInt(event.detail, 10);
@@ -28,5 +29,9 @@ export default class ParentComponent extends LightningElement {
         this.cartItems.forEach(item => console.log(item.name,item.quantity));
 
         this.dispatchEvent(new CustomEvent('cartupdate', { detail: this.cartItems }));
+    }
+
+    handleSubmit() {
+        this.orderMessage = 'Order successfully placed!';
     }
 }
